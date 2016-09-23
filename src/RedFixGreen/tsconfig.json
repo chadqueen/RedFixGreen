@@ -14,7 +14,10 @@
   },
   "exclude": [
     "node_modules",
-    "wwwroot"
+    "wwwroot",
+    "typings/index.d.ts",
+    "typings/globals/node",
+    "typings/globals/jasmine"
   ],
   "compileOnSave": false,
   "buildOnSave": false

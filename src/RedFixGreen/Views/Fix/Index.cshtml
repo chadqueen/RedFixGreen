@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Start Fixing";
+    Layout = "_angular";
+}
+@section head
+{
+    <base href="/fix/">
+}
+@section Scripts
+{
+    <script src="@Url.Content("~/build/polyfills.bundle.js")"></script>
+    <script src="@Url.Content("~/build/vendor.bundle.js")"></script>
+    <script src="@Url.Content("~/build/app.bundle.js")"></script>
+}
