@@ -1,5 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './auth/auth.service';
 
 @Component({
     selector: 'my-app',
@@ -9,6 +10,6 @@ import { Router } from '@angular/router';
 
 export class AppComponent {
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private auth: AuthService) {
     }
 }

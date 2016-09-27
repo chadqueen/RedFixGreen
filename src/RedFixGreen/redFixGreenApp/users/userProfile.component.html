@@ -1,4 +1,5 @@
-﻿<form #formRef="ngForm" (ngSubmit)="onSubmit(formRef)">
+﻿{{auth.isAuthenticated()}}
+<form #formRef="ngForm" (ngSubmit)="onSubmit(formRef)">
     <fieldset ngModelGroup="profile">
         <input type="text" name="username" [(ngModel)]="username" #usernameRef="ngModel" required minlength="3" />
         <div *ngIf="usernameRef.errors?.required">This field is required.</div>

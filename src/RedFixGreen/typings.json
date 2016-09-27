@@ -1,8 +1,12 @@
 {
   "globalDependencies": {
+    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160914235635",
+    "auth0-js": "registry:dt/auth0-js#0.0.0+20160830143606",
+    "auth0.lock": "registry:dt/auth0.lock#0.0.0+20160919061738",
     "core-js": "registry:dt/core-js#0.0.0+20160914114559",
     "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
     "node": "registry:dt/node#6.0.0+20160921192128",
-    "require": "registry:dt/require#2.1.20+20160919185614"
+    "require": "registry:dt/require#2.1.20+20160919185614",
+    "selenium-webdriver": "registry:dt/selenium-webdriver#2.53.1+20160914235635"
   }
 }

@@ -3,12 +3,12 @@ import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/operator/filter';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
     selector: 'userProfile',
     template: require('./userProfile.component.html')
 })
-
 export class UserProfileComponent implements OnInit, AfterViewInit {
     @ViewChild('formRef') form: NgForm;
 
@@ -16,7 +16,7 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
     public opportunityInterests: string[];
     public securityMethods: string[];
 
-    constructor() {
+    constructor(private auth: AuthService) {
         this.username = "John";
         this.opportunityInterests = ['Volunteer', 'Donate'];
         this.securityMethods = ['Two Factor Authentication', 'Client Key'];
