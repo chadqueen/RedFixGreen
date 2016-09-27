@@ -1,0 +1,23 @@
+﻿<form #formRef="ngForm" (ngSubmit)="onSubmit(formRef)">
+    <fieldset ngModelGroup="profile">
+        <input type="text" name="username" [(ngModel)]="username" #usernameRef="ngModel" required minlength="3" />
+        <div *ngIf="usernameRef.errors?.required">This field is required.</div>
+        <div *ngIf="usernameRef.errors?.minlength">This field must be longer than {{usernameRef.errors?.minlength.requiredLength}} characters.</div>
+        
+        <input type="text" name="favoriteColor" [(ngModel)]="favoriteColor" #favoriteColorRef="ngModel" required />
+    </fieldset>
+    <fieldset ngModelGroup="contribution">
+        <div *ngFor="let opportunity of opportunityInterests">
+            <input [attr.id]="opportunity" name="interest" ngModel [value]="opportunity" type="radio" required />
+            <label [attr.for]="opportunity">{{opportunity}}</label>
+        </div>
+    </fieldset>
+    <fieldset ngModelGroup="security">
+        <select name="securityMethod" [(ngModel)]="securityMethod">
+            <option *ngFor="let securityMethod of securityMethods" [value]="securityMethod">{{securityMethod}}</option>
+        </select>
+    </fieldset>
+    <button type="submit">Submit</button>
+</form>
+{{formRef.value | json}}
+{{formRef.valid | json}}

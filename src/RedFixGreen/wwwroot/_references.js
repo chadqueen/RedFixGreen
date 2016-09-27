@@ -9,6 +9,7 @@
 /// <reference path="../redfixgreenapp/karma-test-shim.js" />
 /// <reference path="../redfixgreenapp/main.js" />
 /// <reference path="../redfixgreenapp/polyfills.js" />
+/// <reference path="../redfixgreenapp/users/userprofile.component.js" />
 /// <reference path="../redfixgreenapp/vendor.js" />
 /// <reference path="../vendor.js" />
 /// <reference path="../webpack.config.js" />
