@@ -18,6 +18,7 @@
     "typings/index.d.ts",
     "typings/globals/node",
     "typings/globals/jasmine",
+    "typings/globals/require",
     "typings/globals/angular-protractor",
     "typings/globals/selenium-webdriver"
   ],
